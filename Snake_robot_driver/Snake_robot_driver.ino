@@ -1,24 +1,3 @@
-/* 
- *  Reading the one axis soft flex sensor from Bend Labs in polled mode
- *  By: Colton Ottley @ Bend Labs
- *  Date: June 18th, 2019
- *  
- *  This sktech configures the one axis soft flex sensor from Bendlabs
- *  to simultaneously supply bend (angular displacement) and stretch
- *  (linear displacement) data via a polling setup.
- *  
- *  When reading data from the sensor in polled mode, instead of interrupt mode,
- *  each sample read triggers the sensor to take another sample and go back to 
- *  sleep. This results in a one sample interval delay between the sampling of
- *  the sensor position and the data that is read out. 
- *  
- *  Minimum sample interval is 2ms (500 Hz sample rate)
- *  
- *  Sensor is not 5V tolerant use only with 3.3V boards
- *  
- *  Refer to one_axis_quick_start_guide.pdf for wiring instructions
- */
-
 #include "Arduino.h"
 
 //Arduino PWM Speed Control：
